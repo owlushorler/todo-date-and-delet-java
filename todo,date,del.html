@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <style>
+        .pp{
+            background-color: green;
+            color: white;
+            
+        }
+        .sp {
+            margin-left: 150px;
+        }
+        .we{
+            background-color: red;
+            margin-left: 40px;
+        }
+    </style>
+    <input class="jo" type="text">
+    <input class="popo" type="date">
+    <button class="pp" onclick="mol()">enter</button>
+    <div class="bb"></div>
+    
+
+<script>
+let todo = [ {
+    name: 'tolo',
+    date: '2022-4-6'
+},{ name: 'tolo',
+    date: '2022-4-6'}
+];
+
+function love(){
+   
+    koll = [];
+    
+for (i=0;i < todo.length;i++){
+    kol = todo[i]
+    name = kol.name
+    date=kol.date
+    
+    koll  += `<p>${name} <span class="sp"> ${date}</span>
+          <button class='we' onclick='
+        todo.splice(${i}, 1)
+         love();' > delet</button> </p>`
+}let html = document.querySelector('.bb')
+    html.innerHTML = koll
+}
+
+function mol() {
+let ele = document.querySelector('.jo')
+low = ele.value
+datee = document.querySelector('.popo')
+da = datee.value
+todo.push({name: low,
+date:da})
+love()
+}
+
+</script>
+
+</body>
+</html>
